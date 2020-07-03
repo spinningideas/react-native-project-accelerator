@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "React Native Project Accelerator",
+    "slug": "react-native-project-accelerator",
+    "description": "React Native project accelerator that can serve as reference for bootstrapping projects. Includes localization and authorization via services based approach using hooks to manage state and react native elements for UX",
+    "privacy": "public",
+    "sdkVersion": "37.0.0",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
