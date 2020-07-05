@@ -26,7 +26,7 @@
   "uikit": "React Native Elements",
   "uikitdescription": "具有视觉吸引力的React组件，可实现Google的Material Design以及布局和主题支持",
   "expo": "Expo",
-  "expodescription": "使用工具集快速开始构建React Apps，该工具集可让您专注于开发.",
+  "expodescription": "使用工具集快速开始构建React Native Apps，该工具集可让您专注于开发.",
   "notifications": "通知事项",
   "notificationsdescription": "以下是通知示例",
   "modals": "模态对话框",

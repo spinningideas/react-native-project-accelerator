@@ -1,18 +1,16 @@
-﻿const supportedLanguageMap = {
-  enUS: 'English',
-  zhCN: 'Chinese',
-  esES: 'Spanish'
-};
-
-import StorageService from 'src/services/StorageService';
+﻿import StorageService from 'src/services/StorageService';
 
 const LocalizationService = () => {
   const defaultLocale = 'enUS';
 
   const storageService = StorageService;
 
-  const getLocales = () => {
-    return supportedLanguageMap;
+  const getSupportedLocales = () => {
+    return [
+      { localeCode: 'enUS', text: 'English' },
+      { localeCode: 'zhCN', text: 'Chinese' },
+      { localeCode: 'esES', text: 'Spanish' }
+    ];
   };
 
   const getUserLocale = async () => {
@@ -56,22 +54,22 @@ const LocalizationService = () => {
   };
 
   const getLocalizedData = async (localeCode) => {
-    // get data from folder by locale 
+    // get data from folder by locale
     //let path = `assets/i18n/${localeCode}.json`;
-		//const localizedDataFile = require(path);
-		const languages = {
-			enUS: require('./data/i18n/enUS.json'),
-			esES: require('./data/i18n/esES.json'),
-			zhCN: require('./data/i18n/zhCN.json'),
-		};
-		const localeData = languages[localeCode];
-		return localeData;
+    //const localizedDataFile = require(path);
+    const languages = {
+      enUS: require('./data/i18n/enUS.json'),
+      esES: require('./data/i18n/esES.json'),
+      zhCN: require('./data/i18n/zhCN.json')
+    };
+    const localeData = languages[localeCode];
+    return localeData;
   };
 
   return {
+    getSupportedLocales,
     setUserLocale,
     getUserLocale,
-    getLocales,
     getCurrentLocale,
     getLocalizedTextSet
   };

@@ -25,12 +25,12 @@ And scan the QR code in the Expo client app.
 
 ### Icons
 
-- https://material.io/resources/icons/?icon=explore&style=baseline
+- [Base Line](https://material.io/resources/icons/?icon=explore&style=baseline)
+- [Custom](https://github.com/oblador/react-native-vector-icons#custom-fonts)
 
 ### Auth
 
-- https://developerlife.com/2017/04/26/flexbox-layouts-and-lists-with-react-native/
-- https://dev.to/embeddednature/create-an-authorization-flow-with-react-navigation-5-x-2pkh && https://github.com/ICeZer0/NativeAuthApp
+- [Tutorial](https://dev.to/embeddednature/create-an-authorization-flow-with-react-navigation-5-x-2pkh && https://github.com/ICeZer0/NativeAuthApp)
 
 ### Drawer
 

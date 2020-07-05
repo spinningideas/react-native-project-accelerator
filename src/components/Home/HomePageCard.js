@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { Card } from 'react-native-elements';
 
 const styles = StyleSheet.create({
@@ -11,30 +11,25 @@ const styles = StyleSheet.create({
     borderColor: '#cccccc',
     borderWidth: 1,
     borderRadius: 0
-	},
+  },
   section: {
     fontSize: 20,
-    color: '#222222',
-		textAlign: 'left',
-		marginBottom: 10
+    color: '#212121',
+    textAlign: 'left',
+    marginBottom: 10
   }
 });
 
 const HomePageCard = (props) => {
-	
-	return (
-		<Card style={styles.container}>
-			<Text style={styles.section}>
-				{props.locData.homepagewelcome}
-			</Text>
-			<Text style={styles.section}>
-				{props.locData.aboutdescription}
-			</Text>
-			<Text style={styles.section}>
-				{props.locData.getstartedmessage}
-			</Text>
-		</Card>
-	);
+  console.log('HomePageCard:' + props.userHasSignedIn);
+  return (
+    <Card style={styles.container}>
+      <Text style={styles.section}>{props.locData.homepagewelcome}</Text>
+      <Text style={styles.section}>{props.locData.aboutdescription}</Text>
+      <Text style={styles.section}>{props.locData.getstartedmessage}</Text>
+      {props.userHasSignedIn && <Text style={styles.section}>{props.locData.authenticatedcontentdescription}</Text>}
+    </Card>
+  );
 };
 
 export default HomePageCard;

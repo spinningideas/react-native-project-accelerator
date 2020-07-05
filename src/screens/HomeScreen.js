@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { ListItem, Icon } from 'react-native-elements';
-import AuthService from 'src/services/AuthService';
+import AppContext from 'src/AppContext';
 import LocalizationService from 'src/services/LocalizationService';
 import HomePageCard from 'src/components/Home/HomePageCard';
 
@@ -16,22 +16,18 @@ const styles = StyleSheet.create({
   }
 });
 
-const HomeScreen = ({ navigation }) => {
-  const [userSignedIn, setUserSignedIn] = useState(false);
+const HomeScreen = (props) => {
   const [locData, setLocData] = useState({});
 
-  const authService = AuthService();
+  const { userHasSignedIn } = useContext(AppContext);
+
   const localizationService = LocalizationService();
 
   const homePageContentItems = [
-    { id: 'continents', title: 'View Continents', onPressItem: () => navigation.navigate('Continents', {}) },
-    { id: 'search', title: 'Search', onPressItem: () => navigation.navigate('Search', {}) }
+    { id: 'continents', title: 'View Continents', onPressItem: () => props.navigation.navigate('Continents', {}) },
+    { id: 'search', title: 'Search', onPressItem: () => props.navigation.navigate('Search', {}) },
+    { id: 'contact', title: 'Forms Example', onPressItem: () => props.navigation.navigate('Contact', {}) }
   ];
-
-  useEffect(() => {
-    let userHasSignedIn = authService.userHasSignedIn();
-    setUserSignedIn(userHasSignedIn);
-  }, []);
 
   useEffect(() => {
     async function loadLocalization() {
@@ -70,15 +66,15 @@ const HomeScreen = ({ navigation }) => {
   const renderHomeContentItems = ({ item }) => (
     <ListItem
       title={item.title}
-			onPress={item.onPressItem}
-			bottomDivider
-      chevron={<Icon color="#444444" name="arrow-forward" />}
+      onPress={item.onPressItem}
+      bottomDivider
+      chevron={<Icon color="#616161" name="arrow-forward" />}
     ></ListItem>
   );
 
   return (
     <View style={styles.container}>
-      <HomePageCard locData={locData} />
+      <HomePageCard locData={locData} userHasSignedIn={userHasSignedIn} />
       <FlatList
         vertical
         showsVerticalScrollIndicator={true}

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     margin: 10,
     fontWeight: 'bold',
-    color: '#222222',
+    color: '#212121',
     textAlign: 'center'
   },
   listContainer: {
@@ -42,7 +42,7 @@ const CountriesListScreen = ({ route, navigation }) => {
           <Text>Population: {item.population.toLocaleString()}</Text>
         </View>
       }
-      chevron={<Icon color="#444444" name="arrow-forward" />}
+      chevron={<Icon color='#616161' name='arrow-forward' />}
       bottomDivider
       onPress={() => onPressCountry(item)}
     ></ListItem>

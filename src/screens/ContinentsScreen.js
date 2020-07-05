@@ -16,7 +16,7 @@ const ContinentsScreen = ({ navigation }) => {
       key={item.continentCode}
       title={item.continentName}
       subtitle={`${geographyService.getNumberCountriesByContinentCode(item.continentCode)} countries`}
-      chevron={<Icon color="#444444" name="arrow-forward" />}
+      chevron={<Icon color='#616161' name='arrow-forward' />}
       bottomDivider
       onPress={() => onPressContinent(item)}
     />

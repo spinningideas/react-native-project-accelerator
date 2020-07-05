@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
 const LoadingIndicator = (props) => {
 	return <View style={styles.container}>
-		<ActivityIndicator style={styles.horizontal} size="large" color="#444444" />
+		<ActivityIndicator style={styles.horizontal} size='large' color='#616161' />
 	</View>
 };
 

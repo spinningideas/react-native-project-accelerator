@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     margin: 10,
     fontWeight: 'bold',
-    color: '#222222',
+    color: '#212121',
     textAlign: 'center'
   },
   listItemContainer: {
@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
 
 const SearchScreen = ({ navigation }) => {
   const [searchText, setSearchText] = useState('');
-	const [searchResultsData, setSearchResultsData] = useState([]);
-	
-	const geographyService = GeographyService();
+  const [searchResultsData, setSearchResultsData] = useState([]);
+
+  const geographyService = GeographyService();
 
   const handleSearch = (text) => {
     var searchResultsArray = geographyService.searchCountriesByCountryName(text);
@@ -57,7 +57,7 @@ const SearchScreen = ({ navigation }) => {
     <ListItem
       key={item.countryCode}
       title={item.countryName}
-			chevron={<Icon color="#444444" name="arrow-forward" />}
+      chevron={<Icon color="#616161" name="arrow-forward" />}
       bottomDivider
       onPress={() => onPressCountry(item)}
     ></ListItem>
@@ -69,17 +69,17 @@ const SearchScreen = ({ navigation }) => {
         containerStyle={{
           backgroundColor: 'transparent',
           borderBottomColor: 'transparent',
-					borderTopColor: 'transparent',
-					color: '#222222'
-				}}
-				placeholderTextColor='#222222'
+          borderTopColor: 'transparent',
+          color: '#212121'
+        }}
+        placeholderTextColor="#212121"
         inputContainerStyle={{
-          backgroundColor: '#e5e5e5',
-          color: '#222222'
+          backgroundColor: '#eeeeee',
+          color: '#212121'
         }}
         inputStyle={{
-          backgroundColor: '#e5e5e5',
-          color: '#222222'
+          backgroundColor: '#eeeeee',
+          color: '#212121'
         }}
         searchIcond
         clearIcon

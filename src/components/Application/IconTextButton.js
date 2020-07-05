@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     height: 25,
-		width: 25,
-		color: '#444444'
+    width: 25,
+    color: '#616161'
   },
   text: {
     fontSize: 16,
@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
 
 const IconTextButton = (props) => {
   return (
-    <TouchableHighlight onPress={props.onPress} style={styles.highLightContainer} underlayColor="#e5e5e5">
+    <TouchableHighlight onPress={props.onPress} style={styles.highLightContainer} underlayColor="#9e9e9e">
       <View style={styles.container}>
         <Icon style={styles.icon} name={props.icon} />
-        {props.title && <Text style={styles.text}>{props.title}</Text>}
+        {props.text && <Text style={styles.text}>{props.text}</Text>}
       </View>
     </TouchableHighlight>
   );

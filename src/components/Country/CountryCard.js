@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#222222',
+    color: '#212121',
     textAlign: 'center'
   },
   labelValue: {
     fontSize: 24,
-    color: '#666666'
+    color: '#616161'
   }
 });
 

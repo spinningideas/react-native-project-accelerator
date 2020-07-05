@@ -10,15 +10,15 @@ const AuthDialog = (props) => {
   return (
     <Overlay
       isVisible={props.open}
-      windowBackgroundColor="#ffffff"
-      overlayBackgroundColor="#ffffff"
-      width="auto"
-      height="auto"
+      windowBackgroundColor='#ffffff'
+      overlayBackgroundColor='#ffffff'
+      width='auto'
+      height='auto'
       onBackdropPress={props.onDialogClose}
     >
       <View>
-        {props.userSignedIn && <AuthButton title="Sign Out" onClick={props.onSignOut} />}
-        {!props.userSignedIn && <AuthButton title="Sign in" onClick={props.onSignIn} />}
+        {props.userHasSignedIn && <AuthButton title='Sign Out' onClick={props.onSignOut} />}
+        {!props.userHasSignedIn && <AuthButton title='Sign in' onClick={props.onSignIn} />}
       </View>
     </Overlay>
   );
