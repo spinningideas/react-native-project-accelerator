@@ -15,11 +15,13 @@ And scan the QR code in the Expo client app.
 
 ## Features
 
-- Compatible with Expo
-- Custom Drawer Menu
-- Navigation Bar via React Native Elements Header
 - Search
-- Persistent user settings storage
+- Compatible with Expo
+- Custom Drawer Menu via react-native-gesture-handler
+- Navigation Bar via React Native Elements Header
+- Persistent user language storage
+- Localization via local json files and service
+- Form validation via formik and yup
 
 ## Notes
 
@@ -33,7 +35,8 @@ And scan the QR code in the Expo client app.
 
 ### Auth
 
-- [Tutorial](https://dev.to/embeddednature/create-an-authorization-flow-with-react-navigation-5-x-2pkh && https://github.com/ICeZer0/NativeAuthApp)
+- [Tutorial](https://dev.to/embeddednature/create-an-authorization-flow-with-react-navigation-5-x-2pkh)
+- https://github.com/ICeZer0/NativeAuthApp)
 
 ### Drawer
 
@@ -48,7 +51,7 @@ And scan the QR code in the Expo client app.
 - https://react-native-community.github.io/async-storage/
 
 ### Forms
- 
+
 - [Formik - React Native](https://jaredpalmer.com/formik/docs/guides/react-native)
 - [Yup](https://github.com/jquense/yup)
 - [Formik/Yup - Validation](https://dev.to/amanhimself/build-and-validate-forms-in-react-native-using-formik-and-yup-54oc)
