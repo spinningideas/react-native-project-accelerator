@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AppContext = React.createContext({
-  userHasSignedIn: false
+  userHasSignedIn: false, localeCode: 'enUS'
 });
 
 export const AppContextProvider = AppContext.Provider;

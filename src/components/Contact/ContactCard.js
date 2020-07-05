@@ -41,10 +41,7 @@ const ContactCard = (props) => {
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().label(props.locData.email).email('Enter a valid email').required(props.locData.required),
-    name: Yup.string()
-      .label(props.locData.name)
-      .required()
-      .min(4, 'Name must have at least 4 characters '),
+    name: Yup.string().label(props.locData.name).required().min(4, 'Name must have at least 4 characters '),
     message: Yup.string().label(props.locData.message).required().min(4, 'Message must have at least 4 characters ')
   });
 

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { View, StyleSheet } from 'react-native';
+import AppContext from 'src/AppContext';
 import LocalizationService from 'src/services/LocalizationService';
 import Notification from 'src/components/Shared/Notification';
 import ContactCard from 'src/components/Contact/ContactCard';
@@ -12,12 +13,14 @@ const styles = StyleSheet.create({
 });
 
 const ContactScreen = () => {
-  const [locData, setLocData] = useState({});
+	const [locData, setLocData] = useState({});
+	
+	const { localeCode } = useContext(AppContext);
+
   const localizationService = LocalizationService();
 
   useEffect(() => {
     async function loadLocData() {
-      const locCode = await localizationService.getUserLocale();
       const locDataLoaded = await localizationService.getLocalizedTextSet(
         [
           'contact',
@@ -30,12 +33,12 @@ const ContactScreen = () => {
           'messagedescription',
           'required'
         ],
-        locCode
+        localeCode
       );
       setLocData(locDataLoaded);
     }
     loadLocData();
-  }, []);
+  }, [localeCode]);
 
   const handleContactScreenSave = (contactInfo) => {
     const notification = Notification();

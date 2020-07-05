@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Overlay, Icon } from 'react-native-elements';
-// import IconTextButton from 'src/components/Shared/IconTextButton';
-
 import LocalizationService from 'src/services/LocalizationService';
 
 const styles = StyleSheet.create({
@@ -35,37 +33,11 @@ const LanguageDialog = (props) => {
     loadLocaleCode();
   }, [selectedLanguageCode]);
 
-  /*
-	
-	<FlatList
-			style={styles.container}
-			data={supportedLanguages}
-			renderItem={renderLanguagesListItem}
-			keyExtractor={(item) => `${item.code}`}
-	></FlatList>
-
-  const renderLanguagesListItem = ({ item }) => (
-    <ListItem
-      key={item.text}
-      title={item.text}
-      leftAvatar={getIcon()}
-      bottomDivider
-      onPress={() => onSelectLanguage(item)}
-    ></ListItem>
-	);
-
-	return <IconTextButton
-		key={lang.value}
-		icon={getIconName(lang)}
-		text={lang.text}
-		onPress={() => onSelectLanguage(lang)} />
-				
-	*/
-
   const onSelectLanguage = async (item) => {
-    setSelectedLanguageCode(item.value);
+    setSelectedLanguageCode(item.localeCode);
     await localizationService.setUserLocale(item.localeCode);
     props.onDialogClose();
+    props.onLanguageSelection(item.localeCode);
   };
 
   const getIconName = (lang) => {

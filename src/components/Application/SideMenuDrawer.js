@@ -38,12 +38,8 @@ const SideMenuDrawer = (props) => {
   };
 
   const MenuListItem = (props) => (
-		<IconTextButton
-			text={props.text}
-			icon={props.icon}
-			onPress={() => navigateFromLink(props.route)}
-		></IconTextButton>
-	);
+    <IconTextButton text={props.text} icon={props.icon} onPress={() => navigateFromLink(props.route)}></IconTextButton>
+  );
 
   return (
     <View style={styles.drawerContainer}>
@@ -54,7 +50,7 @@ const SideMenuDrawer = (props) => {
         <MenuListItem text={props.locData.home} icon="home" route="Home" />
         <MenuListItem text={props.locData.continents} icon="explore" route="Continents" />
         <MenuListItem text={props.locData.search} icon="search" route="Search" />
-				<MenuListItem text={props.locData.contact} icon="contact-mail" route="Contact" />
+        <MenuListItem text={props.locData.contact} icon="contact-mail" route="Contact" />
       </View>
     </View>
   );

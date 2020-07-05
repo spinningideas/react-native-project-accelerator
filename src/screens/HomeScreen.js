@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 const HomeScreen = (props) => {
   const [locData, setLocData] = useState({});
 
-  const { userHasSignedIn } = useContext(AppContext);
+  const { userHasSignedIn, localeCode } = useContext(AppContext);
 
   const localizationService = LocalizationService();
 
@@ -31,8 +31,6 @@ const HomeScreen = (props) => {
 
   useEffect(() => {
     async function loadLocData() {
-      const locCode = await localizationService.getUserLocale();
-
       const locDataLoaded = await localizationService.getLocalizedTextSet(
         [
           'welcome',
@@ -58,12 +56,12 @@ const HomeScreen = (props) => {
 					'formsexampledescription',
 					'viewcontinents'
         ],
-        locCode
+        localeCode
       );
       setLocData(locDataLoaded);
     }
     loadLocData();
-  }, []);
+  }, [localeCode]);
 
   const renderHomeContentItems = ({ item }) => (
     <ListItem

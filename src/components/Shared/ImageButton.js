@@ -1,6 +1,5 @@
 import React from 'react';
 import { TouchableHighlight, Image, StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   btnContainer: {
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const BackButton = (props) => {
+const ImageButton = (props) => {
   return (
     <TouchableHighlight onPress={props.onPress} style={styles.btnContainer}>
       <Image source={require(props.source)} style={styles.btnIcon} />
@@ -33,4 +32,4 @@ const BackButton = (props) => {
   );
 };
 
-export default BackButton;
+export default ImageButton;

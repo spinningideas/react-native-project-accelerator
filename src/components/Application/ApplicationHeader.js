@@ -54,12 +54,12 @@ const ApplicationHeader = (props) => {
 
   const onSignIn = () => {
     setAuthDialogOpen(false);
-    props.triggerAppAuthEvent(true);
+    props.triggerOnAppAuthEvent(true);
   };
 
   const onSignOut = () => {
     setAuthDialogOpen(false);
-    props.triggerAppAuthEvent(false);
+    props.triggerOnAppAuthEvent(false);
   };
 
   const getApplicationTitle = () => {
@@ -108,7 +108,11 @@ const ApplicationHeader = (props) => {
         onSignOut={onSignOut}
         onDialogClose={toggleAuthDialogOpen}
       />
-      <LanguageDialog open={langDialogOpen} onDialogClose={toggleLangDialogOpen} />
+      <LanguageDialog
+        open={langDialogOpen}
+        onDialogClose={toggleLangDialogOpen}
+        onLanguageSelection={props.triggerOnLocaleEvent}
+      />
     </View>
   );
 };

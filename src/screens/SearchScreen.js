@@ -42,19 +42,18 @@ const SearchScreen = ({ navigation }) => {
   const geographyService = GeographyService();
 	const localizationService = LocalizationService();
 	
-  const { userHasSignedIn } = useContext(AppContext);
+  const { localeCode } = useContext(AppContext);
 
   useEffect(() => {
     async function loadLocData() {
-      const locCode = await localizationService.getUserLocale();
       const locDataLoaded = await localizationService.getLocalizedTextSet(
         ['search'],
-        locCode
+        localeCode
       );
       setLocData(locDataLoaded);
     }
     loadLocData();
-  }, []);
+  }, [localeCode]);
 
   const handleSearch = (text) => {
     var searchResultsArray = geographyService.searchCountriesByCountryName(text);
@@ -98,8 +97,8 @@ const SearchScreen = ({ navigation }) => {
         inputStyle={{
           backgroundColor: '#eeeeee',
           color: '#212121'
-        }}
-        searchIcond
+				}}
+				searchIcon={<Icon color="#616161" name="search" />}
         clearIcon
         lightTheme
         onChangeText={(text) => handleSearch(text)}

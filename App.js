@@ -13,6 +13,7 @@ import SideMenuDrawer from 'src/components/Application/SideMenuDrawer';
 
 export default App = () => {
   const [userHasSignedIn, setUserHasSignedIn] = useState(false);
+  const [localeCode, setLocaleCode] = useState('enUS');
   const [locData, setLocData] = useState({});
   const authService = AuthService();
   const localizationService = LocalizationService();
@@ -30,16 +31,21 @@ export default App = () => {
         locCode
       );
       setLocData(locDataLoaded);
+      setLocaleCode(locCode);
     }
     loadLocData();
-  }, []);
+  }, [localeCode]);
 
   const onAuthEvent = (userSignedIn) => {
     setUserHasSignedIn(userSignedIn);
   };
 
+  const onLocaleSelectEvent = (locCode) => {
+    setLocaleCode(locCode);
+  };
+
   return (
-    <AppContextProvider value={{ userHasSignedIn: userHasSignedIn }}>
+    <AppContextProvider value={{ userHasSignedIn: userHasSignedIn, localeCode: localeCode }}>
       <ThemeProvider theme={theme}>
         <NavigationContainer
           ref={navigationRef}
@@ -65,7 +71,8 @@ export default App = () => {
             <ApplicationHeader
               authService={authService}
               userHasSignedIn={userHasSignedIn}
-              triggerAppAuthEvent={onAuthEvent}
+              triggerOnAppAuthEvent={onAuthEvent}
+              triggerOnLocaleEvent={onLocaleSelectEvent}
               openDrawer={() => drawer.openDrawer()}
             />
             <AppNavigationScreens locData={locData} />

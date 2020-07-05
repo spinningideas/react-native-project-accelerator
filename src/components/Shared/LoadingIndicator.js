@@ -13,10 +13,12 @@ const styles = StyleSheet.create({
   }
 });
 
-const LoadingIndicator = (props) => {
-	return <View style={styles.container}>
-		<ActivityIndicator style={styles.horizontal} size='large' color='#616161' />
-	</View>
+const LoadingIndicator = () => {
+  return (
+    <View style={styles.container}>
+      <ActivityIndicator style={styles.horizontal} size="large" color="#616161" />
+    </View>
+  );
 };
 
 export default LoadingIndicator;
