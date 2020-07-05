@@ -46,15 +46,15 @@ const HomeScreen = (props) => {
           'view',
           'close',
           'authenticatedcontent',
-					'authenticatedcontentdescription',
-					'search',
+          'authenticatedcontentdescription',
+          'search',
           'services',
           'serviceexampletitle',
           'serviceexampledescription',
           'forms',
           'formsexample',
-					'formsexampledescription',
-					'viewcontinents'
+          'formsexampledescription',
+          'viewcontinents'
         ],
         localeCode
       );

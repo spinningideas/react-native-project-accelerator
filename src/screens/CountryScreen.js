@@ -4,7 +4,7 @@ import CountryCard from 'src/components/Country/CountryCard';
 import GeographyService from 'src/services/GeographyService';
 
 const CountryScreen = ({ route }) => {
-	const [selectedContinent, setSelectedContinent] = useState(null);
+  const [selectedContinent, setSelectedContinent] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
 
   const { country } = route.params;
@@ -13,8 +13,8 @@ const CountryScreen = ({ route }) => {
 
   useEffect(() => {
     let continent = geographyService.getContinentByContinentCode(country.continentCode);
-		setSelectedContinent(continent);
-    setSelectedCountry(country);    
+    setSelectedContinent(continent);
+    setSelectedCountry(country);
   }, [country]);
 
   if (selectedCountry == null || selectedContinent == null) {

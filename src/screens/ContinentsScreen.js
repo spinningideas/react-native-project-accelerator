@@ -4,8 +4,7 @@ import { ListItem, Icon } from 'react-native-elements';
 import GeographyService from 'src/services/GeographyService';
 
 const ContinentsScreen = ({ navigation }) => {
-
-	const geographyService = GeographyService();
+  const geographyService = GeographyService();
 
   const onPressContinent = (item) => {
     navigation.navigate('CountriesList', { continent: item });
@@ -16,7 +15,7 @@ const ContinentsScreen = ({ navigation }) => {
       key={item.continentCode}
       title={item.continentName}
       subtitle={`${geographyService.getNumberCountriesByContinentCode(item.continentCode)} countries`}
-      chevron={<Icon color='#616161' name='arrow-forward' />}
+      chevron={<Icon color="#616161" name="arrow-forward" />}
       bottomDivider
       onPress={() => onPressContinent(item)}
     />

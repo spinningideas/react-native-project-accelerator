@@ -35,21 +35,18 @@ const styles = StyleSheet.create({
 });
 
 const SearchScreen = ({ navigation }) => {
-	const [locData, setLocData] = useState({});
+  const [locData, setLocData] = useState({});
   const [searchText, setSearchText] = useState('');
   const [searchResultsData, setSearchResultsData] = useState([]);
 
   const geographyService = GeographyService();
-	const localizationService = LocalizationService();
-	
+  const localizationService = LocalizationService();
+
   const { localeCode } = useContext(AppContext);
 
   useEffect(() => {
     async function loadLocData() {
-      const locDataLoaded = await localizationService.getLocalizedTextSet(
-        ['search'],
-        localeCode
-      );
+      const locDataLoaded = await localizationService.getLocalizedTextSet(['search'], localeCode);
       setLocData(locDataLoaded);
     }
     loadLocData();
@@ -97,8 +94,8 @@ const SearchScreen = ({ navigation }) => {
         inputStyle={{
           backgroundColor: '#eeeeee',
           color: '#212121'
-				}}
-				searchIcon={<Icon color="#616161" name="search" />}
+        }}
+        searchIcon={<Icon color="#616161" name="search" />}
         clearIcon
         lightTheme
         onChangeText={(text) => handleSearch(text)}

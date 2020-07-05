@@ -13,9 +13,9 @@ const styles = StyleSheet.create({
 });
 
 const ContactScreen = () => {
-	const [locData, setLocData] = useState({});
-	
-	const { localeCode } = useContext(AppContext);
+  const [locData, setLocData] = useState({});
+
+  const { localeCode } = useContext(AppContext);
 
   const localizationService = LocalizationService();
 

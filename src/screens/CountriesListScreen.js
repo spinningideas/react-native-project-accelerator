@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
 });
 
 const CountriesListScreen = ({ route, navigation }) => {
-	const { continent } = route.params;
-	
-	const geographyService = GeographyService();
+  const { continent } = route.params;
+
+  const geographyService = GeographyService();
 
   const countriesArray = geographyService.getCountriesByContinentCode(route.params.continent.continentCode);
 
@@ -41,7 +41,7 @@ const CountriesListScreen = ({ route, navigation }) => {
           <Text>Population: {item.population.toLocaleString()}</Text>
         </View>
       }
-      chevron={<Icon color='#616161' name='arrow-forward' />}
+      chevron={<Icon color="#616161" name="arrow-forward" />}
       bottomDivider
       onPress={() => onPressCountry(item)}
     ></ListItem>
