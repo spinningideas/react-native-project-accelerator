@@ -44,13 +44,13 @@ const SideMenuDrawer = (props) => {
   return (
     <View style={styles.drawerContainer}>
       <View style={styles.drawerHeader}>
-        <IconTextButton style={styles.drawerClose} icon="close" onPress={props.closeDrawer}></IconTextButton>
+        <IconTextButton style={styles.drawerClose} icon='close' onPress={props.closeDrawer}></IconTextButton>
       </View>
       <View style={styles.drawerMenu}>
-        <MenuListItem text={props.locData.home} icon="home" route="Home" />
-        <MenuListItem text={props.locData.continents} icon="explore" route="Continents" />
-        <MenuListItem text={props.locData.search} icon="search" route="Search" />
-        <MenuListItem text={props.locData.contact} icon="contact-mail" route="Contact" />
+        <MenuListItem text={props.locData.home} icon='home' route='Home' />
+        <MenuListItem text={props.locData.continents} icon='explore' route='Continents' />
+        <MenuListItem text={props.locData.search} icon='search' route='Search' />
+        <MenuListItem text={props.locData.contact} icon='contact-mail' route='Contact' />
       </View>
     </View>
   );

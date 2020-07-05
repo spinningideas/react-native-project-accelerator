@@ -68,7 +68,7 @@ const HomeScreen = (props) => {
       title={item.title}
       onPress={item.onPressItem}
       bottomDivider
-      chevron={<Icon color="#616161" name="arrow-forward" />}
+      chevron={<Icon color='#616161' name='arrow-forward' />}
     ></ListItem>
   );
 

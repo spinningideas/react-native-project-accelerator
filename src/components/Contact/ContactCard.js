@@ -54,36 +54,36 @@ const ContactCard = (props) => {
       {({ values, handleChange, handleSubmit, errors, isValid }) => (
         <Card style={styles.container}>
           <FormInput
-            name="name"
+            name='name'
             label={props.locData.name}
             value={values.name}
             placeholder={props.locData.name}
-            autoCapitalize="none"
+            autoCapitalize='none'
             onChangeText={handleChange('name')}
             errors={errors.name}
           />
           <FormInput
-            name="email"
+            name='email'
             label={props.locData.email}
             value={values.email}
             placeholder={props.locData.email}
-            autoCapitalize="none"
+            autoCapitalize='none'
             onChangeText={handleChange('email')}
-            iconName="mail-outline"
+            iconName='mail-outline'
             errors={errors.email}
           />
           <FormInput
-            name="message"
+            name='message'
             label={props.locData.message}
             value={values.message}
             placeholder={props.locData.messagedescription}
-            autoCapitalize="none"
+            autoCapitalize='none'
             onChangeText={handleChange('message')}
             errors={errors.message}
             multiline={true}
             numberOfLines={3}
           />
-          <Button title={props.locData.cancel} type="outline" />
+          <Button title={props.locData.cancel} type='outline' />
           <Button title={props.locData.save} disabled={!isValid} onPress={handleSubmit} />
         </Card>
       )}

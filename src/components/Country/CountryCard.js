@@ -40,7 +40,7 @@ const CountryCard = (props) => {
         }
       ></ListItem>
       <ListItem
-        title="Continent"
+        title='Continent'
         subtitle={
           <View>
             <Text style={styles.labelValue}>{continent.continentName}</Text>
@@ -49,7 +49,7 @@ const CountryCard = (props) => {
         bottomDivider
       />
       <ListItem
-        title="Capital"
+        title='Capital'
         subtitle={
           <View>
             <Text style={styles.labelValue}>{country.capital}</Text>
@@ -58,7 +58,7 @@ const CountryCard = (props) => {
         bottomDivider
       />
       <ListItem
-        title="Area"
+        title='Area'
         subtitle={
           <View>
             <Text style={styles.labelValue}>{country.area.toLocaleString()}</Text>
@@ -67,7 +67,7 @@ const CountryCard = (props) => {
         bottomDivider
       />
       <ListItem
-        title="Population"
+        title='Population'
         subtitle={
           <View>
             <Text style={styles.labelValue}>{country.population.toLocaleString()}</Text>
@@ -76,7 +76,7 @@ const CountryCard = (props) => {
         bottomDivider
       />
       <ListItem
-        title="Currency"
+        title='Currency'
         subtitle={
           <View>
             <Text style={styles.labelValue}>{country.currencyCode}</Text>

@@ -73,10 +73,10 @@ const LanguageDialog = (props) => {
   return (
     <Overlay
       isVisible={props.open}
-      windowBackgroundColor="#ffffff"
-      overlayBackgroundColor="#ffffff"
-      width="auto"
-      height="200"
+      windowBackgroundColor='#ffffff'
+      overlayBackgroundColor='#ffffff'
+      width='auto'
+      height='200'
       onBackdropPress={props.onDialogClose}
     >
       <LanguagesList open={props.open} />

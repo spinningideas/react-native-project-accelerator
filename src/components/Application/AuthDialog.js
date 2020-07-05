@@ -47,10 +47,10 @@ const AuthDialog = (props) => {
   return (
     <Overlay
       isVisible={props.open}
-      windowBackgroundColor="#ffffff"
-      overlayBackgroundColor="#ffffff"
-      width="auto"
-      height="auto"
+      windowBackgroundColor='#ffffff'
+      overlayBackgroundColor='#ffffff'
+      width='auto'
+      height='auto'
       onBackdropPress={props.onDialogClose}
     >
       <View style={styles.dialogContainer}>
