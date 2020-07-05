@@ -36,7 +36,7 @@ And scan the QR code in the Expo client app.
 ### Auth
 
 - [Tutorial](https://dev.to/embeddednature/create-an-authorization-flow-with-react-navigation-5-x-2pkh)
-- https://github.com/ICeZer0/NativeAuthApp)
+- https://github.com/ICeZer0/NativeAuthApp
 
 ### Drawer
 
