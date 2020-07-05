@@ -17,8 +17,8 @@ const GeographyService = () => {
   };
 
   const getCountryByCountryCode = (countryCode) => {
-		let results = countries.filter((country) => country.countryCode === countryCode);
-		if (results.length > 0) {
+    let results = countries.filter((country) => country.countryCode === countryCode);
+    if (results.length > 0) {
       return results[0];
     }
     return null;
