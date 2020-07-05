@@ -5,6 +5,10 @@ React Native project accelerator that can serve as reference for bootstrapping p
 Includes localization and authorization via services based approach using hooks to
 manage state and react native for UX
 
+STATUS: Alpha
+
+Note: This repo is under active change and this code should be used as reference implementation ONLY and not used in a production application
+
 ## Getting Started
 
 To run the app, simply run
