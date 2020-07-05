@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 const BackButton = (props) => {
   return (
     <TouchableHighlight onPress={props.onPress} style={styles.btnContainer}>
-      <Image source={require('assets/icons/backArrow.png')} style={styles.btnIcon} />
+      <Image source={require(props.source)} style={styles.btnIcon} />
     </TouchableHighlight>
   );
 };

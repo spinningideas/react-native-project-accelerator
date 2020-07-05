@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
 });
 
 const HomePageCard = (props) => {
-  console.log('HomePageCard:' + props.userHasSignedIn);
   return (
     <Card style={styles.container}>
       <Text style={styles.section}>{props.locData.homepagewelcome}</Text>

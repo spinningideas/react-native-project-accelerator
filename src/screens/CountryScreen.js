@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LoadingIndicator from 'src/components/Application/LoadingIndicator';
+import LoadingIndicator from 'src/components/Shared/LoadingIndicator';
 import CountryCard from 'src/components/Country/CountryCard';
 import GeographyService from 'src/services/GeographyService';
 

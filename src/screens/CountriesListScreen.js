@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlatList, View, Text, StyleSheet } from 'react-native';
 import { ListItem, Icon } from 'react-native-elements';
-
 import GeographyService from 'src/services/GeographyService';
 
 const styles = StyleSheet.create({

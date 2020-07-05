@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Dimensions, Platform, View, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { Dimensions, View, StyleSheet } from 'react-native';
 import { Header, Icon } from 'react-native-elements';
 import AuthDialog from 'src/components/Application/AuthDialog';
 import LanguageDialog from 'src/components/Application/LanguageDialog';
@@ -63,7 +63,7 @@ const ApplicationHeader = (props) => {
   };
 
   const getApplicationTitle = () => {
-    if (width < 600) {
+    if (width < 768) {
       return 'RNPA';
     }
     return 'React Native Project Accelerator';

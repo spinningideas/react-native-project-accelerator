@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Overlay, Icon } from 'react-native-elements';
-// import IconTextButton from 'src/components/Application/IconTextButton';
+// import IconTextButton from 'src/components/Shared/IconTextButton';
 
 import LocalizationService from 'src/services/LocalizationService';
 

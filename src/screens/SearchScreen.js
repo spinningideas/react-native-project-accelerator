@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
 import { SearchBar, ListItem, Icon } from 'react-native-elements';
+import AppContext from 'src/AppContext';
 import GeographyService from 'src/services/GeographyService';
+import LocalizationService from 'src/services/LocalizationService';
 
 const styles = StyleSheet.create({
   container: {
@@ -33,10 +35,26 @@ const styles = StyleSheet.create({
 });
 
 const SearchScreen = ({ navigation }) => {
+	const [locData, setLocData] = useState({});
   const [searchText, setSearchText] = useState('');
   const [searchResultsData, setSearchResultsData] = useState([]);
 
   const geographyService = GeographyService();
+	const localizationService = LocalizationService();
+	
+  const { userHasSignedIn } = useContext(AppContext);
+
+  useEffect(() => {
+    async function loadLocData() {
+      const locCode = await localizationService.getUserLocale();
+      const locDataLoaded = await localizationService.getLocalizedTextSet(
+        ['search'],
+        locCode
+      );
+      setLocData(locDataLoaded);
+    }
+    loadLocData();
+  }, []);
 
   const handleSearch = (text) => {
     var searchResultsArray = geographyService.searchCountriesByCountryName(text);
@@ -86,7 +104,7 @@ const SearchScreen = ({ navigation }) => {
         lightTheme
         onChangeText={(text) => handleSearch(text)}
         onClear={() => handleSearch('')}
-        placeholder="Search"
+        placeholder={locData.search}
         value={searchText}
       />
       <FlatList

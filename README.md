@@ -25,7 +25,10 @@ And scan the QR code in the Expo client app.
 
 ### Icons
 
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [Base Line](https://material.io/resources/icons/?icon=explore&style=baseline)
+- [Base Line Glyphs](https://github.com/oblador/react-native-vector-icons/blob/master/glyphmaps/MaterialIcons.json)
+- [Available Sets](https://github.com/oblador/react-native-vector-icons/tree/master/glyphmaps)
 - [Custom](https://github.com/oblador/react-native-vector-icons#custom-fonts)
 
 ### Auth
@@ -43,3 +46,9 @@ And scan the QR code in the Expo client app.
 ### Storage
 
 - https://react-native-community.github.io/async-storage/
+
+### Forms
+ 
+- [Formik - React Native](https://jaredpalmer.com/formik/docs/guides/react-native)
+- [Yup](https://github.com/jquense/yup)
+- [Formik/Yup - Validation](https://dev.to/amanhimself/build-and-validate-forms-in-react-native-using-formik-and-yup-54oc)

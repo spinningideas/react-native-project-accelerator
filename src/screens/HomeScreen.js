@@ -24,13 +24,13 @@ const HomeScreen = (props) => {
   const localizationService = LocalizationService();
 
   const homePageContentItems = [
-    { id: 'continents', title: 'View Continents', onPressItem: () => props.navigation.navigate('Continents', {}) },
-    { id: 'search', title: 'Search', onPressItem: () => props.navigation.navigate('Search', {}) },
-    { id: 'contact', title: 'Forms Example', onPressItem: () => props.navigation.navigate('Contact', {}) }
+    { id: 'continents', title: locData.viewcontinents, onPressItem: () => props.navigation.navigate('Continents', {}) },
+    { id: 'search', title: locData.search, onPressItem: () => props.navigation.navigate('Search', {}) },
+    { id: 'contact', title: locData.formsexample, onPressItem: () => props.navigation.navigate('Contact', {}) }
   ];
 
   useEffect(() => {
-    async function loadLocalization() {
+    async function loadLocData() {
       const locCode = await localizationService.getUserLocale();
 
       const locDataLoaded = await localizationService.getLocalizedTextSet(
@@ -48,19 +48,21 @@ const HomeScreen = (props) => {
           'view',
           'close',
           'authenticatedcontent',
-          'authenticatedcontentdescription',
+					'authenticatedcontentdescription',
+					'search',
           'services',
           'serviceexampletitle',
           'serviceexampledescription',
           'forms',
           'formsexample',
-          'formsexampledescription'
+					'formsexampledescription',
+					'viewcontinents'
         ],
         locCode
       );
       setLocData(locDataLoaded);
     }
-    loadLocalization();
+    loadLocData();
   }, []);
 
   const renderHomeContentItems = ({ item }) => (
