@@ -1,7 +1,7 @@
 import { Dimensions } from 'react-native';
 export const primaryThemeDark = '#1976d2';
 const { width, height } = Dimensions.get('window');
-export const SCREEN_WIDTH = width < height ? width : height;
+export const screenWidth = width < height ? width : height;
 // https://react-native-elements.github.io/react-native-elements/docs/customization.html#the-theme-object
 // https://www.materialpalette.com/colors
 // https://material.io/resources/color/#!/?view.left=0&view.right=0
@@ -12,9 +12,9 @@ export const theme = {
     secondary: '#616161',
     background: '#ffffff',
     text: '#212121',
-		border: '#212121',
-		success:'#388e3c',
-		warning: '#d32f2f'
+    border: '#212121',
+    success: '#388e3c',
+    warning: '#d32f2f'
   },
   Card: {
     margin: 0,
