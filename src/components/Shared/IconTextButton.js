@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 const IconTextButton = (props) => {
   return (
-    <TouchableHighlight onPress={props.onPress} style={styles.highLightContainer} underlayColor='#9e9e9e'>
+    <TouchableHighlight onPress={props.onPress} style={styles.highLightContainer} underlayColor='#e9e9e9'>
       <View style={styles.container}>
         <Icon style={styles.icon} name={props.icon} />
         {props.text && <Text style={styles.text}>{props.text}</Text>}

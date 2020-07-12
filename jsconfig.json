@@ -2,5 +2,5 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src", "AppStyles.js", "AppContext.js"]
+  "include": ["src", "AppContext.js"]
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button, Overlay } from 'react-native-elements';
-import AppContext from 'src/AppContext';
+import AppContext from 'AppContext';
 import LocalizationService from 'src/services/LocalizationService';
 
 const styles = StyleSheet.create({

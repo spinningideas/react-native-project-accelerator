@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
 import { SearchBar, ListItem, Icon } from 'react-native-elements';
-import AppContext from 'src/AppContext';
+import AppContext from 'AppContext';
 import GeographyService from 'src/services/GeographyService';
 import LocalizationService from 'src/services/LocalizationService';
 
@@ -71,7 +71,7 @@ const SearchScreen = ({ navigation }) => {
     <ListItem
       key={item.countryCode}
       title={item.countryName}
-      chevron={<Icon color='#616161' name='arrow-forward' />}
+      chevron={<Icon color="#616161" name="arrow-forward" />}
       bottomDivider
       onPress={() => onPressCountry(item)}
     ></ListItem>
@@ -80,13 +80,14 @@ const SearchScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <SearchBar
+        autoFocus={true}
         containerStyle={{
           backgroundColor: 'transparent',
           borderBottomColor: 'transparent',
           borderTopColor: 'transparent',
           color: '#212121'
         }}
-        placeholderTextColor='#212121'
+        placeholderTextColor="#212121"
         inputContainerStyle={{
           backgroundColor: '#eeeeee',
           color: '#212121'
@@ -95,7 +96,7 @@ const SearchScreen = ({ navigation }) => {
           backgroundColor: '#eeeeee',
           color: '#212121'
         }}
-        searchIcon={<Icon color='#616161' name='search' />}
+        searchIcon={<Icon color="#616161" name="search" />}
         clearIcon
         lightTheme
         onChangeText={(text) => handleSearch(text)}

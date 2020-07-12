@@ -11,18 +11,8 @@ const { width } = Dimensions.get('window');
 let headerStyles = {
   backgroundColor: '#ffffff',
   justifyContent: 'flex-start',
-  paddingTop: 0,
-  height: 50
+  height: 60
 };
-/*
-Header has too much top padding - this seems to be an android issue ONLY
-styles above attempt to address this 
-
-if(Platform.Version <= 20){
-	headerStyles['paddingTop'] = 0;
-	headerStyles['height'] = 0;
-}
-*/
 
 const styles = StyleSheet.create({
   rightButtonContainer: {

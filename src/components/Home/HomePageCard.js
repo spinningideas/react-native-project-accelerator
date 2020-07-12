@@ -20,13 +20,22 @@ const styles = StyleSheet.create({
   }
 });
 
+
 const HomePageCard = (props) => {
+
+	const AuthenticatedContent =()=>{
+		if(props.userHasSignedIn){
+			return <Text style={styles.section}>{props.locData.authenticatedcontentdescription}</Text>
+		}
+		return <></>    
+	}
+
   return (
     <Card style={styles.container}>
       <Text style={styles.section}>{props.locData.homepagewelcome}</Text>
       <Text style={styles.section}>{props.locData.aboutdescription}</Text>
       <Text style={styles.section}>{props.locData.getstartedmessage}</Text>
-      {props.userHasSignedIn && <Text style={styles.section}>{props.locData.authenticatedcontentdescription}</Text>}
+			<AuthenticatedContent />
     </Card>
   );
 };

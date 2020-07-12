@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { ListItem, Icon } from 'react-native-elements';
-import AppContext from 'src/AppContext';
+import AppContext from 'AppContext';
 import LocalizationService from 'src/services/LocalizationService';
 import HomePageCard from 'src/components/Home/HomePageCard';
 

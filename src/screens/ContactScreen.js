@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { View, StyleSheet } from 'react-native';
-import AppContext from 'src/AppContext';
+import AppContext from 'AppContext';
 import LocalizationService from 'src/services/LocalizationService';
 import Notification from 'src/components/Shared/Notification';
 import ContactCard from 'src/components/Contact/ContactCard';

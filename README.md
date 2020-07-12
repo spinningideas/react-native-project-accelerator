@@ -13,7 +13,7 @@ Note: This repo is under active change and this code should be used as reference
 
 To run the app, simply run
 
-`npm install && expo start`
+`npm install && npm run start`
 
 And scan the QR code in the Expo client app.
 

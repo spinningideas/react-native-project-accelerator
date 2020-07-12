@@ -8,21 +8,19 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 0,
     height: height,
-    justifyContent: 'flex-start',
-    alignContent: 'flex-start',
     borderColor: '#cccccc',
     borderWidth: 1,
     borderRadius: 0
   },
   drawerHeader: {
-    height: 50,
-    padding: 10,
-    alignItems: 'flex-end'
-  },
+		height: 50,
+		margin: 0
+	}, 
   drawerClose: {
-    height: 50,
-    width: 50,
-    alignSelf: 'flex-end'
+		marginTop: 20,
+    height: 45,
+		width: 45,
+		left: 250
   },
   drawerMenu: {
     padding: 10,
@@ -44,7 +42,9 @@ const SideMenuDrawer = (props) => {
   return (
     <View style={styles.drawerContainer}>
       <View style={styles.drawerHeader}>
-        <IconTextButton style={styles.drawerClose} icon='close' onPress={props.closeDrawer}></IconTextButton>
+				<View style={styles.drawerClose}>
+					<IconTextButton icon='close' onPress={props.closeDrawer}></IconTextButton>      
+				</View>
       </View>
       <View style={styles.drawerMenu}>
         <MenuListItem text={props.locData.home} icon='home' route='Home' />

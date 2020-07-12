@@ -1,13 +1,18 @@
 import 'react-native-gesture-handler';
 import React, { useEffect, useState } from 'react';
-import { ThemeProvider } from 'react-native-elements';
+// Navigation
 import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
 import { NavigationContainer } from '@react-navigation/native';
-import { AppContextProvider } from 'src/AppContext';
+import AppNavigationScreens, { appNavigate, navigationRef, isReadyRef } from 'src/AppNavigation';
+// Context
+import { AppContextProvider } from 'AppContext';
+// Styling and themeing
+import { ThemeProvider } from 'react-native-elements';
 import { theme } from 'src/AppStyles';
-import AppNavigationScreens, { appNavigate, navigationRef } from 'src/AppNavigation';
+// Services
 import AuthService from 'src/services/AuthService';
 import LocalizationService from 'src/services/LocalizationService';
+// Components
 import ApplicationHeader from 'src/components/Application/ApplicationHeader';
 import SideMenuDrawer from 'src/components/Application/SideMenuDrawer';
 
